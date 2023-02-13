@@ -13,6 +13,11 @@
   flex-direction: column;
 }
 
+section {
+  width: 100%;
+  min-height: 100vh;
+}
+
 .style__header {
   width: 100%;
   height: 100px;
@@ -117,31 +122,26 @@
 }
 
 .style__mainContainer {
-  padding-top: 100px;
+  padding-top: 70px;
   max-width: 1000px;
   margin: 0 auto;
 }
 
 .home {
-  width: 100%;
-  min-height: 100vh;
-  padding: 0 2rem;
   display: flex;
   flex-direction: column;
+  padding-top: 70px;
 }
 .home .desc {
   max-width: 100%;
-  height: 300px;
+  height: 250px;
+  margin: 0 auto;
   position: relative;
-  top: 150px;
   padding: 1.5rem 1rem;
-  border: 1px solid #eeeeee;
-  border-radius: 10px;
-  box-shadow: -5px 5px 5px -5px #919191;
 }
 .home .desc__greet {
   font-weight: 500;
-  margin: 10px 0 1.5rem 0;
+  margin: 10px 0;
   color: #5c5c5c;
 }
 .home .desc__name {
@@ -153,56 +153,64 @@
   color: #303030;
 }
 .home .desc__text {
-  font-size: 1.2rem;
-  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  margin-top: 1rem;
   color: #919191;
 }
 .home__buttonsArea, .home .links__area {
   max-width: 100%;
-  padding: 1rem 0;
   position: relative;
-  text-align: center;
-  transform: translateY(10rem);
+  margin: 1rem;
+  margin-top: 0;
 }
-.home__buttonsArea .buttons__container, .home .links__area .buttons__container, .home .links__area .links__container {
-  margin: 0 auto;
+.home__buttonsArea .buttons__container, .home .links__area .buttons__container {
   max-width: 500px;
-  display: flex;
-  justify-content: space-evenly;
-}
-.home__buttonsArea .getInTouch__btn, .home .links__area .getInTouch__btn,
-.home__buttonsArea .resume__btn,
-.home .links__area .resume__btn {
-  width: 200px;
-  display: inline-block;
-  padding: 1rem 2rem;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s;
-  border: 1px solid #919191;
-  border-radius: 10px;
-  box-shadow: 0 3px 3px -3px;
-}
-.home__buttonsArea .getInTouch__btn:hover, .home .links__area .getInTouch__btn:hover,
-.home__buttonsArea .resume__btn:hover,
-.home .links__area .resume__btn:hover {
-  color: #ee4e34;
-  border-color: #eeeeee;
-}
-.home__buttonsArea .getInTouch__btn:hover a, .home .links__area .getInTouch__btn:hover a,
-.home__buttonsArea .resume__btn:hover a,
-.home .links__area .resume__btn:hover a {
-  color: #ee4e34;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
 }
 .home__buttonsArea .contact__btn, .home .links__area .contact__btn,
 .home__buttonsArea .resume__link,
 .home .links__area .resume__link {
-  margin-left: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  border: 1px solid #919191;
+  border-radius: 10px;
+  box-shadow: 0 3px 3px -3px;
+  transition: all 0.3s;
+  cursor: pointer;
   text-decoration: none;
   color: #303030;
   font-weight: 500;
 }
+.home__buttonsArea .contact__btn i, .home .links__area .contact__btn i,
+.home__buttonsArea .resume__link i,
+.home .links__area .resume__link i {
+  margin-right: 10px;
+}
+.home__buttonsArea .contact__btn:hover, .home .links__area .contact__btn:hover,
+.home__buttonsArea .resume__link:hover,
+.home .links__area .resume__link:hover {
+  color: #ee4e34;
+  border-color: #eeeeee;
+}
+.home .links__area {
+  margin: 2rem 0;
+}
+.home .links__area .links__container {
+  position: relative;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .home .links__area .links__container i {
+  margin: 0 1rem;
   font-size: 1.5rem;
   cursor: pointer;
   transition: transform 0.1s ease-in;
@@ -218,11 +226,11 @@
 }
 .home .scroll__down {
   position: absolute;
-  width: 2rem;
-  height: 3.5rem;
+  width: 1.8rem;
+  height: 3rem;
   border: 2px solid #5c5c5c;
   border-radius: 50px;
-  margin: 0 auto;
+  margin: auto;
   left: 0;
   right: 0;
   bottom: 4rem;
@@ -230,12 +238,12 @@
 }
 .home .scroll__down::before {
   content: "";
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   position: absolute;
   left: 0;
   right: 0;
-  top: 0.35rem;
+  top: 0.3rem;
   margin: 0 auto;
   background-color: #ee4e34;
   border-radius: 50px;
@@ -245,7 +253,7 @@
   content: "Press me";
   width: 7rem;
   position: absolute;
-  left: -2.5rem;
+  left: -2.7rem;
   bottom: -2rem;
   display: block;
   text-align: center;
@@ -257,7 +265,7 @@
     background-color: #303030;
   }
   100% {
-    transform: translateY(2rem);
+    transform: translateY(1.5rem);
     opacity: 0;
   }
 }/*# sourceMappingURL=main.css.map */

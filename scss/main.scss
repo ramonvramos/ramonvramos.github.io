@@ -7,6 +7,11 @@
   flex-direction: column;
 }
 
+section {
+  width: 100%;
+  min-height: 100vh;
+}
+
 .style__header {
   width: 100%;
   height: 100px;
@@ -135,25 +140,20 @@
 }
 
 .home {
-  width: 100%;
-  min-height: 100vh;
-  padding: 0 2rem;
   display: flex;
   flex-direction: column;
+  padding-top: $spacing-top;
 
   .desc {
     max-width: 100%;
-    height: 300px;
+    height: 250px;
+    margin: 0 auto;
     position: relative;
-    top: 150px;
     padding: 1.5rem 1rem;
-    border: 1px solid $shade-2;
-    border-radius: 10px;
-    box-shadow: -5px 5px 5px -5px $shade-3;
 
     &__greet {
       font-weight: 500;
-      margin: 10px 0 1.5rem 0;
+      margin: 10px 0;
       color: $shade-4;
     }
 
@@ -168,64 +168,66 @@
     }
 
     &__text {
-      font-size: 1.2rem;
-      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      margin-top: 1rem;
       color: $shade-3;
     }
   }
 
   &__buttonsArea {
     max-width: 100%;
-    padding: 1rem 0;
     position: relative;
-    text-align: center;
-    transform: translateY(10rem);
+    margin: 1rem;
+    margin-top: 0;
 
     .buttons__container {
-      margin: 0 auto;
       max-width: 500px;
-      display: flex;
-      justify-content: space-evenly;
-    }
-
-    .getInTouch__btn,
-    .resume__btn {
-      width: 200px;
-      display: inline-block;
-      padding: 1rem 2rem;
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.3s;
-      border: 1px solid $shade-3;
-      border-radius: 10px;
-      box-shadow: 0 3px 3px -3px;
-
-      &:hover {
-        color: $accent;
-        border-color: $shade-2;
-
-        & a {
-          color: $accent;
-        }
-      }
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 10px;
     }
 
     .contact__btn,
     .resume__link {
-      margin-left: 5px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      font-size: 0.8rem;
+      border: 1px solid $shade-3;
+      border-radius: 10px;
+      box-shadow: 0 3px 3px -3px;
+      transition: all 0.3s;
+      cursor: pointer;
       text-decoration: none;
       color: $shade-5;
       font-weight: 500;
+
+      & i {
+        margin-right: 10px;
+      }
+
+      &:hover {
+        color: $accent;
+        border-color: $shade-2;
+      }
     }
   }
 
   .links__area {
     @extend .home__buttonsArea;
+    margin: 2rem 0;
 
     .links__container {
-      @extend .buttons__container;
+      position: relative;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
 
       & i {
+        margin: 0 1rem;
         font-size: 1.5rem;
         cursor: pointer;
         transition: transform 0.1s ease-in;
@@ -245,11 +247,11 @@
   }
   .scroll__down {
     position: absolute;
-    width: 2rem;
-    height: 3.5rem;
+    width: 1.8rem;
+    height: 3rem;
     border: 2px solid $shade-4;
     border-radius: 50px;
-    margin: 0 auto;
+    margin: auto;
     left: 0;
     right: 0;
     bottom: 4rem;
@@ -257,12 +259,12 @@
 
     &::before {
       content: "";
-      width: 10px;
-      height: 10px;
+      width: 9px;
+      height: 9px;
       position: absolute;
       left: 0;
       right: 0;
-      top: 0.35rem;
+      top: 0.3rem;
       margin: 0 auto;
       background-color: $accent;
       border-radius: 50px;
@@ -273,7 +275,7 @@
       content: "Press me";
       width: 7rem;
       position: absolute;
-      left: -2.5rem;
+      left: -2.7rem;
       bottom: -2rem;
       display: block;
       text-align: center;
@@ -287,9 +289,11 @@
       }
 
       100% {
-        transform: translateY(2rem);
+        transform: translateY(1.5rem);
         opacity: 0;
       }
     }
   }
 }
+
+// About section

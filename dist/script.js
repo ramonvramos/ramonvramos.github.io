@@ -1,7 +1,6 @@
 const menuBox = document.querySelector(".menu__box");
 const menuContainer = document.querySelector(".menu__container");
 const navbar = document.querySelector(".style__header");
-let previousScroll = window.pageYOffset;
 
 // Mobile menu animation toggle
 menuBox.addEventListener("click", (e) => {
@@ -9,6 +8,7 @@ menuBox.addEventListener("click", (e) => {
 });
 
 // navbar animation slide up
+let previousScroll = window.pageYOffset;
 window.onscroll = function () {
   const currentScroll = window.pageYOffset;
 
@@ -24,5 +24,3 @@ window.onscroll = function () {
   }
   previousScroll = currentScroll;
 };
-
-console.log(previousScroll);
