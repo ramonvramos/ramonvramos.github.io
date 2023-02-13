@@ -3,10 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-:root {
   font-family: "Roboto Serif", serif;
+  scroll-behavior: smooth;
 }
 
 .content__layout {
@@ -30,10 +28,12 @@
 }
 
 .style__navbar {
+  max-width: 1000px;
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
   padding: 0 1.5rem;
 }
 .style__navbar .logo__container {
@@ -118,21 +118,22 @@
 
 .style__mainContainer {
   padding-top: 100px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .home {
   width: 100%;
   min-height: 100vh;
+  padding: 0 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 0 2rem;
 }
 .home .desc {
-  max-width: 1000px;
+  max-width: 100%;
   height: 300px;
   position: relative;
-  top: 100px;
+  top: 150px;
   padding: 1.5rem 1rem;
   border: 1px solid #eeeeee;
   border-radius: 10px;
@@ -155,4 +156,108 @@
   font-size: 1.2rem;
   margin-top: 1.5rem;
   color: #919191;
+}
+.home__buttonsArea, .home .links__area {
+  max-width: 100%;
+  padding: 1rem 0;
+  position: relative;
+  text-align: center;
+  transform: translateY(10rem);
+}
+.home__buttonsArea .buttons__container, .home .links__area .buttons__container, .home .links__area .links__container {
+  margin: 0 auto;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.home__buttonsArea .getInTouch__btn, .home .links__area .getInTouch__btn,
+.home__buttonsArea .resume__btn,
+.home .links__area .resume__btn {
+  width: 200px;
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid #919191;
+  border-radius: 10px;
+  box-shadow: 0 3px 3px -3px;
+}
+.home__buttonsArea .getInTouch__btn:hover, .home .links__area .getInTouch__btn:hover,
+.home__buttonsArea .resume__btn:hover,
+.home .links__area .resume__btn:hover {
+  color: #ee4e34;
+  border-color: #eeeeee;
+}
+.home__buttonsArea .getInTouch__btn:hover a, .home .links__area .getInTouch__btn:hover a,
+.home__buttonsArea .resume__btn:hover a,
+.home .links__area .resume__btn:hover a {
+  color: #ee4e34;
+}
+.home__buttonsArea .contact__btn, .home .links__area .contact__btn,
+.home__buttonsArea .resume__link,
+.home .links__area .resume__link {
+  margin-left: 5px;
+  text-decoration: none;
+  color: #303030;
+  font-weight: 500;
+}
+.home .links__area .links__container i {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.1s ease-in;
+}
+.home .links__area .links__container i:hover {
+  transform: translateY(-0.2rem) scale(1.05);
+  color: #ee4e34;
+  transition: 0.1s ease-out;
+}
+.home #scroll-down {
+  text-decoration: none;
+  color: #303030;
+}
+.home .scroll__down {
+  position: absolute;
+  width: 2rem;
+  height: 3.5rem;
+  border: 2px solid #5c5c5c;
+  border-radius: 50px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 4rem;
+  cursor: pointer;
+}
+.home .scroll__down::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0.35rem;
+  margin: 0 auto;
+  background-color: #ee4e34;
+  border-radius: 50px;
+  animation: move-down 2s infinite;
+}
+.home .scroll__down::after {
+  content: "Press me";
+  width: 7rem;
+  position: absolute;
+  left: -2.5rem;
+  bottom: -2rem;
+  display: block;
+  text-align: center;
+  font-weight: 500;
+}
+@keyframes move-down {
+  80% {
+    opacity: 0.5;
+    background-color: #303030;
+  }
+  100% {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
 }/*# sourceMappingURL=main.css.map */
