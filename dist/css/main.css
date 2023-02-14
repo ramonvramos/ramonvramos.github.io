@@ -352,7 +352,7 @@ section {
   border-left: 3px solid transparent;
   border-bottom: 3px solid transparent;
   border-radius: 10px;
-  transition: 0.5s ease;
+  transition: 0.5s;
 }
 .about .about__tools .tools__container .tool__item:hover::before {
   border-color: #ee4e34;
