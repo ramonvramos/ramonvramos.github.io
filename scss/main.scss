@@ -405,3 +405,241 @@ section {
     }
   }
 }
+
+// Projects section
+.projects {
+  @extend .about;
+
+  &__heading {
+    @extend .about__heading;
+    margin-bottom: 2rem;
+  }
+
+  .project {
+    @include flexCenter(column);
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    &__image {
+      width: 100%;
+      height: 300px;
+      border: 2px solid $shade-2;
+      border-radius: 10px;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 10px;
+        filter: opacity(0.8);
+        transition: filter 0.25s;
+
+        &:hover {
+          filter: opacity(1);
+        }
+      }
+    }
+
+    &__container {
+      @extend .project;
+      width: 90%;
+      border: 2px solid $shade-2;
+      border-radius: 10px;
+      background-color: $shade-1;
+      box-shadow: 0 5px 5px -3px $shade-4;
+      margin-top: -70px;
+      z-index: 10;
+
+      &__title {
+        margin: 1.5rem 0;
+        text-align: center;
+        color: $accent;
+      }
+
+      &__description {
+        margin: 0 1rem;
+
+        & a {
+          text-decoration: none;
+          color: $shade-6;
+          font-weight: 500;
+          transition: color 0.25s;
+
+          &:hover {
+            color: $accent;
+          }
+        }
+      }
+
+      &__tools {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 1.5rem 0;
+
+        .tools__inner {
+          padding: 0.5rem;
+          border: 2px solid $shade-2;
+          border-radius: 10px;
+          transition: all 0.25s;
+
+          &:hover {
+            color: $accent;
+            border-color: $accent;
+          }
+
+          & i {
+            font-size: 1.2rem;
+          }
+
+          & p {
+            display: inline-block;
+            margin-left: 5px;
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      .buttons__container {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+        margin-bottom: 2rem;
+
+        & a {
+          padding-bottom: 1rem;
+          text-decoration: none;
+          color: $shade-6;
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            background-color: $accent;
+            transition: transform 0.25s ease-in-out;
+            transform: scaleX(0);
+          }
+
+          &:hover::before,
+          &:focus::before {
+            transform: scaleX(1);
+          }
+        }
+
+        & i {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+//Contact section
+.contact {
+  @extend .projects;
+
+  &__container {
+    .contact__header {
+      @extend .projects__heading;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__formBox {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+
+    .form__container {
+      max-width: 500px;
+      min-height: 300px;
+
+      .form__header {
+        color: $accent;
+        margin: 0 5px;
+      }
+
+      .contact__description {
+        margin: 1rem 5px;
+      }
+
+      .contact__form {
+        margin-top: 1.5rem;
+        .input__box {
+          display: block;
+
+          & input {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 2px solid $shade-2;
+            border-radius: 10px;
+          }
+        }
+
+        .textarea__box {
+          display: block;
+
+          & textarea {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 2px solid $shade-2;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+
+    .contact__details {
+      max-width: 500px;
+
+      .details__header {
+        color: $accent;
+        margin-bottom: 1rem;
+      }
+
+      .itemDetails__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+
+        .contact__item {
+          @include flexCenter(row);
+          justify-content: flex-start;
+
+          i {
+            @include flexCenter(row);
+            width: 3rem;
+            height: 3rem;
+            margin-right: 10px;
+            transition: 0.25s;
+
+            &:hover {
+              color: $accent;
+            }
+          }
+
+          i::before {
+            font-size: 2rem;
+          }
+
+          & .item__descriptionBox {
+            display: inline-block;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
