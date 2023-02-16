@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,200;8..144,300;8..144,400;8..144,500;8..144,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500;600&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto Serif", serif;
+  font-family: "Roboto Mono", monospace;
   scroll-behavior: smooth;
 }
 
@@ -13,9 +13,84 @@
   flex-direction: column;
 }
 
+.toHide {
+  overflow: hidden;
+}
+
 section {
   width: 100%;
   min-height: 100vh;
+}
+
+header .mobile__menu {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  min-height: 100vh;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  right: -60%;
+  background-color: #ffffff;
+  border-top: 1px solid #eeeeee;
+  border-left: 2px solid #eeeeee;
+  box-shadow: -3px 0 10px -10px #919191;
+  transition: all 0.25s ease-in-out;
+}
+header .mobile__menu ul {
+  width: 50%;
+  list-style: none;
+  position: absolute;
+  top: 5rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 3rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+header .mobile__menu ul li {
+  position: relative;
+  padding: 0.5rem;
+  transition: color 0.2s ease-in-out;
+}
+header .mobile__menu ul li:hover {
+  color: #990011;
+}
+header .mobile__menu ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #990011;
+  transition: transform 0.2s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+header .mobile__menu ul li:hover::before, header .mobile__menu ul li:focus::before {
+  transform: scaleX(1);
+}
+header .mobile__menu.active {
+  opacity: 1;
+  visibility: visible;
+  right: 0;
+}
+
+.page__background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+.page__background.active {
+  z-index: 50;
+  opacity: 0.5;
+  visibility: visible;
 }
 
 .style__header {
@@ -102,7 +177,7 @@ section {
   bottom: 0;
 }
 .style__navbar .menu__box .menu__container.active .menu {
-  animation: slideout 0.3s forwards;
+  animation: slidedown 0.3s forwards;
 }
 .style__navbar .menu__box .menu__container.active::before {
   width: 100%;
@@ -112,7 +187,7 @@ section {
   width: 100%;
   transform: translate(0, -11px) rotate(-45deg);
 }
-@keyframes slideout {
+@keyframes slidedown {
   0% {
     transform: translateX(0);
   }
@@ -153,7 +228,7 @@ section {
 }
 .home .desc__text {
   font-size: 0.9rem;
-  margin-top: 1rem;
+  margin: 0.5rem 0;
   color: #919191;
 }
 .home__buttonsArea, .home .links__area {
@@ -293,7 +368,7 @@ section {
 .about__description__intro a {
   text-decoration: none;
   color: #000000;
-  font-weight: 500;
+  font-weight: 600;
   transition: 0.25s;
 }
 .about__description__intro a:hover {
@@ -394,11 +469,10 @@ section {
   -o-object-position: top;
      object-position: top;
   border-radius: 10px;
-  filter: opacity(0.8);
   transition: filter 0.25s;
 }
-.projects .project__image img:hover, .contact .project__image img:hover {
-  filter: opacity(1);
+.projects .project__image img:hover, .contact .project__image img:hover, .projects .project__image img:focus, .contact .project__image img:focus {
+  filter: opacity(0.8);
 }
 .projects .project__container, .contact .project__container {
   width: 90%;
@@ -440,7 +514,7 @@ section {
   border-radius: 10px;
   transition: all 0.25s;
 }
-.projects .project__container__tools .tools__inner:hover, .contact .project__container__tools .tools__inner:hover {
+.projects .project__container__tools .tools__inner:hover, .contact .project__container__tools .tools__inner:hover, .projects .project__container__tools .tools__inner:focus, .contact .project__container__tools .tools__inner:focus {
   color: #990011;
   border-color: #990011;
 }
@@ -526,6 +600,43 @@ section {
   border: 2px solid #eeeeee;
   border-radius: 10px;
 }
+.contact__formBox .form__container .contact__form .form__submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.contact__formBox .form__container .contact__form .form__submit .submit__button {
+  width: 50%;
+  border: 2px solid #eeeeee;
+  background-color: #ffffff;
+  padding: 0.5rem;
+  position: relative;
+  z-index: 1;
+  transition: 0.25s ease-in-out;
+}
+.contact__formBox .form__container .contact__form .form__submit .submit__button:hover, .contact__formBox .form__container .contact__form .form__submit .submit__button:focus {
+  color: #ffffff;
+}
+.contact__formBox .form__container .contact__form .form__submit .submit__button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #990011;
+  z-index: -1;
+  transition: all 0.25s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.contact__formBox .form__container .contact__form .form__submit .submit__button:hover::before, .contact__formBox .form__container .contact__form .form__submit .submit__button:focus::before {
+  transform: scaleX(1);
+}
+.contact__formBox .form__container .contact__form .form__submit .submit__button p {
+  display: inline-block;
+}
 .contact__formBox .contact__details {
   max-width: 500px;
 }
@@ -564,4 +675,50 @@ section {
 .contact__formBox .contact__details .itemDetails__container .contact__item .item__descriptionBox {
   display: inline-block;
   width: 100%;
+}
+
+footer {
+  height: 7rem;
+}
+
+.footerLinks__area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 1rem;
+}
+.footerLinks__area .footerLinks__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.5rem;
+}
+.footerLinks__area .footerLinks__container::before, .footerLinks__area .footerLinks__container::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background-color: #eeeeee;
+}
+.footerLinks__area .footerLinks__container i {
+  font-size: 1.5rem;
+  transition: all 0.2s;
+}
+.footerLinks__area .footerLinks__container i:hover, .footerLinks__area .footerLinks__container i:focus {
+  transform: translateY(-10px) scale(1.1);
+  color: #990011;
+}
+.footerLinks__area .copyright {
+  margin: 0 5px;
+  font-size: 0.9rem;
+}
+.footerLinks__area .copyright span {
+  font-weight: 600;
+  transition: all 0.25s;
+}
+.footerLinks__area .copyright span:hover, .footerLinks__area .copyright span:focus {
+  color: #990011;
 }/*# sourceMappingURL=main.css.map */

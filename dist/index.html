@@ -41,7 +41,17 @@
             </div>
           </div>
         </nav>
+
+        <div class="mobile__menu">
+          <ul>
+            <li class="nav__item">Home</li>
+            <li class="nav__item">About</li>
+            <li class="nav__item">Projects</li>
+            <li class="nav__item">Contact</li>
+          </ul>
+        </div>
       </header>
+      <div class="page__background"></div>
 
       <main class="style__mainContainer">
         <section id="Home" class="home">
@@ -193,7 +203,11 @@
                   Feel free to contact me anytime, I'm always happy to hear from
                   new opportunities and ideas!
                 </p>
-                <form action="" class="contact__form">
+                <form
+                  action="https://formsubmit.co/ramonramosrmt@gmail.com"
+                  method="POST"
+                  class="contact__form"
+                >
                   <div class="input__box">
                     <input
                       type="text"
@@ -226,6 +240,12 @@
                       required
                     ></textarea>
                   </div>
+                  <div class="form__submit">
+                    <button class="submit__button" type="submit">
+                      <i class="fas fa-paper-plane"></i>
+                      <p>Submit</p>
+                    </button>
+                  </div>
                 </form>
               </div>
               <div class="contact__details">
@@ -251,6 +271,21 @@
           </div>
         </section>
       </main>
+
+      <footer>
+        <div class="footerLinks__area">
+          <div class="footerLinks__container">
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-github"></i>
+            <i class="fab fa-free-code-camp"></i>
+            <i class="fab fa-facebook"></i>
+          </div>
+          <p class="copyright">
+            © Copyright 2023 | Designed & built by
+            <span>Ramon Ramos</span>. All rights reserved.
+          </p>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
