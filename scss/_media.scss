@@ -1,0 +1,16 @@
+@media screen and (min-width: 768px) {
+  .about__container {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .style__mainContainer {
+    padding-top: $spacing-top !important;
+  }
+
+  .links__area {
+    margin: 1rem 0 !important;
+  }
+}

@@ -7,6 +7,21 @@
   scroll-behavior: smooth;
 }
 
+@media screen and (min-width: 768px) {
+  .about__container {
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .style__mainContainer {
+    padding-top: 50px !important;
+  }
+  .links__area {
+    margin: 1rem 0 !important;
+  }
+}
 .content__layout {
   max-width: 100%;
   display: flex;
@@ -198,17 +213,16 @@ header .mobile__menu.active {
 }
 
 .style__mainContainer {
-  padding-top: 70px;
+  padding-top: 150px;
 }
 
 .home {
   display: flex;
   flex-direction: column;
-  padding-top: 70px;
+  padding-top: 50px;
 }
 .home .desc {
-  max-width: 100%;
-  height: 250px;
+  max-width: 700px;
   margin: 0 auto;
   position: relative;
   padding: 1.5rem 1rem;
@@ -235,7 +249,7 @@ header .mobile__menu.active {
   max-width: 100%;
   position: relative;
   margin: 1rem;
-  margin-top: 0;
+  margin-top: 1rem;
 }
 .home__buttonsArea .buttons__container, .home .links__area .buttons__container {
   max-width: 500px;
@@ -350,7 +364,7 @@ header .mobile__menu.active {
   background-color: #ffffff;
   padding: 2.5rem 1rem;
 }
-.about__heading, .projects__heading, .contact__container .contact__header, .about .about__tools__Header, .projects .about__tools__Header, .contact .about__tools__Header {
+.about__heading, .projects__heading, .contact__container .contact__header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -361,9 +375,19 @@ header .mobile__menu.active {
 }
 .about__container {
   display: grid;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 .about__description {
-  margin: 1.5rem 0;
+  max-width: 1000px;
+}
+.about__description .description__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: #990011;
+  margin: 1rem 0;
 }
 .about__description__intro a {
   text-decoration: none;
@@ -378,8 +402,12 @@ header .mobile__menu.active {
   margin-top: 1rem;
 }
 .about .about__tools__Header, .projects .about__tools__Header, .contact .about__tools__Header {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: #990011;
+  margin: 1rem 0;
 }
 .about .about__tools .tools__container, .projects .about__tools .tools__container, .contact .about__tools .tools__container {
   display: grid;
@@ -706,9 +734,10 @@ footer {
 .footerLinks__area .footerLinks__container i {
   font-size: 1.5rem;
   transition: all 0.2s;
+  cursor: pointer;
 }
 .footerLinks__area .footerLinks__container i:hover, .footerLinks__area .footerLinks__container i:focus {
-  transform: translateY(-10px) scale(1.1);
+  transform: translateY(-10px) scale(1.5);
   color: #990011;
 }
 .footerLinks__area .copyright {
@@ -718,6 +747,7 @@ footer {
 .footerLinks__area .copyright span {
   font-weight: 600;
   transition: all 0.25s;
+  cursor: pointer;
 }
 .footerLinks__area .copyright span:hover, .footerLinks__area .copyright span:focus {
   color: #990011;
