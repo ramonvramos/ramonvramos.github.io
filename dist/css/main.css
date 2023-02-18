@@ -7,18 +7,118 @@
   scroll-behavior: smooth;
 }
 
+@media screen and (max-width: 768px) {
+  .nav__itemsContainer {
+    display: none;
+  }
+}
 @media screen and (min-width: 768px) {
+  .menu__box {
+    display: none !important;
+  }
+  .home .desc p {
+    font-size: 1.3rem;
+  }
+  .home .desc h1 {
+    font-size: 2.5rem;
+  }
+  .home .desc h2 {
+    font-size: 2rem;
+  }
+  .home__buttonsArea .buttons__container a, .home .links__area .buttons__container a {
+    font-size: 1.1rem;
+  }
+  .about h1, .projects h1, .contact h1 {
+    font-size: 2rem;
+  }
   .about__container {
     grid-template-columns: 1fr 1fr;
     -moz-column-gap: 2rem;
          column-gap: 2rem;
   }
+  .about__container .about__description {
+    margin: 5rem 0;
+  }
+  .about__container .about__description h3 {
+    font-size: 1.5rem;
+  }
+  .about__container .about__description p {
+    font-size: 1.2rem;
+    margin: 2rem 0;
+  }
+  .about__container .about__tools {
+    margin: 5rem 0;
+  }
+  .about__container .about__tools h3 {
+    font-size: 1.5rem;
+  }
+  .projects h1, .contact h1 {
+    margin-bottom: 5rem;
+  }
+  .project {
+    flex-direction: row !important;
+  }
+  .project__image {
+    height: 400px !important;
+  }
+  .project .project__container {
+    margin: 0 !important;
+    margin-left: -100px !important;
+  }
+  .contact__container h1 {
+    font-size: 2rem !important;
+    margin-bottom: 5rem !important;
+  }
+  .contact__formBox {
+    grid-template-columns: 1fr 1fr !important;
+    -moz-column-gap: 5rem;
+         column-gap: 5rem;
+  }
+  .contact__formBox h3 {
+    font-size: 1.5rem;
+  }
+  .contact__formBox button i,
+  .contact__formBox button p {
+    font-size: 1.1rem;
+  }
 }
-@media screen and (max-width: 400px) {
+@media screen and (min-width: 550px) and (max-width: 768px) {
+  .contact__details {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 375px) {
   .style__mainContainer {
     padding-top: 50px !important;
   }
   .links__area {
+    margin: 1rem 0 !important;
+  }
+}
+@media screen and (max-width: 300px) {
+  section {
+    padding: 35px 10px 0 10px !important;
+  }
+  .style__mainContainer {
+    padding-top: 30px !important;
+  }
+  .desc {
+    font-size: 0.8rem;
+  }
+  .scroll__down {
+    bottom: 0 !important;
+  }
+  .buttons__container {
+    grid-template-columns: 1fr !important;
+    row-gap: 1rem !important;
+  }
+  .itemDetails__container {
+    font-size: 0.9rem !important;
+  }
+  .project__container {
+    margin-bottom: 1rem;
+  }
+  footer {
     margin: 1rem 0 !important;
   }
 }
@@ -67,7 +167,8 @@ header .mobile__menu ul {
 header .mobile__menu ul li {
   position: relative;
   padding: 0.5rem;
-  transition: color 0.2s ease-in-out;
+  cursor: pointer;
+  transition: color 0.25s ease-in-out;
 }
 header .mobile__menu ul li:hover {
   color: #990011;
@@ -80,7 +181,7 @@ header .mobile__menu ul li::before {
   bottom: 0;
   height: 2px;
   background-color: #990011;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.25s ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
 }
@@ -146,14 +247,40 @@ header .mobile__menu.active {
   font-size: 1.5rem;
   font-weight: 600;
 }
-.style__navbar .nav__ItemsContainer ol {
+.style__navbar .nav__itemsContainer ol {
+  width: 500px;
   display: flex;
   justify-content: space-evenly;
   list-style: none;
-  display: none;
 }
-.style__navbar .nav__ItemsContainer ol .nav__item {
+.style__navbar .nav__itemsContainer ol .nav__item {
   margin: 0 5px;
+  cursor: pointer;
+}
+.style__navbar .nav__itemsContainer ol .nav__item a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #000000;
+  position: relative;
+  transition: color 0.25s ease-in-out;
+}
+.style__navbar .nav__itemsContainer ol .nav__item a:hover {
+  color: #990011;
+}
+.style__navbar .nav__itemsContainer ol .nav__item a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 2px;
+  background-color: #990011;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease-in-out;
+}
+.style__navbar .nav__itemsContainer ol .nav__item a:hover::before, .style__navbar .nav__itemsContainer ol .nav__item a:focus::before {
+  transform: scaleX(1);
 }
 .style__navbar .menu__box {
   width: 50px;
@@ -213,7 +340,7 @@ header .mobile__menu.active {
 }
 
 .style__mainContainer {
-  padding-top: 150px;
+  padding-top: 120px;
 }
 
 .home {
@@ -375,6 +502,7 @@ header .mobile__menu.active {
 }
 .about__container {
   display: grid;
+  row-gap: 2rem;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -474,7 +602,7 @@ header .mobile__menu.active {
 .projects__heading, .contact__container .contact__header {
   margin-bottom: 2rem;
 }
-.projects .project, .contact .project, .projects .project__container, .contact .project__container {
+.projects .project, .contact .project {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -488,6 +616,7 @@ header .mobile__menu.active {
   height: 300px;
   border: 2px solid #eeeeee;
   border-radius: 10px;
+  cursor: pointer;
 }
 .projects .project__image img, .contact .project__image img {
   width: 100%;
@@ -503,6 +632,10 @@ header .mobile__menu.active {
   filter: opacity(0.8);
 }
 .projects .project__container, .contact .project__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 90%;
   border: 2px solid #eeeeee;
   border-radius: 10px;
@@ -551,7 +684,6 @@ header .mobile__menu.active {
 }
 .projects .project__container__tools .tools__inner p, .contact .project__container__tools .tools__inner p {
   display: inline-block;
-  margin-left: 5px;
   font-size: 0.8rem;
 }
 .projects .project__container .buttons__container, .contact .project__container .buttons__container {
@@ -590,6 +722,8 @@ header .mobile__menu.active {
   margin-bottom: 2rem;
 }
 .contact__formBox {
+  max-width: 1000px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 2rem;
@@ -597,6 +731,7 @@ header .mobile__menu.active {
 .contact__formBox .form__container {
   max-width: 500px;
   min-height: 300px;
+  margin: 0 auto;
 }
 .contact__formBox .form__container .form__header {
   color: #990011;
@@ -642,6 +777,7 @@ header .mobile__menu.active {
   position: relative;
   z-index: 1;
   transition: 0.25s ease-in-out;
+  cursor: pointer;
 }
 .contact__formBox .form__container .contact__form .form__submit .submit__button:hover, .contact__formBox .form__container .contact__form .form__submit .submit__button:focus {
   color: #ffffff;
