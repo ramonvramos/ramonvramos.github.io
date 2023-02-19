@@ -550,8 +550,13 @@ header {
     margin-bottom: 2rem;
   }
 
-  .project {
+  .allProject-container {
     @include flexCenter(column);
+    row-gap: 4rem;
+  }
+
+  .project {
+    @include flexCenter(Column);
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
@@ -677,6 +682,10 @@ header {
         }
       }
     }
+  }
+
+  .secondProject {
+    flex-direction: column-reverse;
   }
 }
 

@@ -65,6 +65,10 @@
     margin: 0 !important;
     margin-left: -100px !important;
   }
+  .project .secondPContainer {
+    margin: 0 !important;
+    margin-right: -100px !important;
+  }
   .contact__container h1 {
     font-size: 2rem !important;
     margin-bottom: 5rem !important;
@@ -610,11 +614,18 @@ header .mobile__menu.active {
 .projects__heading, .contact__container .contact__header {
   margin-bottom: 2rem;
 }
-.projects .project, .contact .project {
+.projects .allProject-container, .contact .allProject-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  row-gap: 4rem;
+}
+.projects .project, .contact .project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: Column;
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
@@ -725,6 +736,9 @@ header .mobile__menu.active {
 }
 .projects .project__container .buttons__container i, .contact .project__container .buttons__container i {
   margin-right: 5px;
+}
+.projects .secondProject, .contact .secondProject {
+  flex-direction: column-reverse;
 }
 
 .contact__container .contact__header {
