@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ramon Ramos | Web Developer</title>
+    <!-- Favicon Image -->
+    <link rel="icon" href="/Favicon/favicon.ico" />
+    <!-- Fontawesome link -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="content__layout">
+      <header class="style__header">
+        <nav class="style__navbar">
+          <div class="logo__container">
+            <img
+              src="/Favicon/android-chrome-192x192.png"
+              alt="main logo"
+              class="logo__main"
+            />
+            <h1>Ramon Ramos</h1>
+          </div>
+          <div class="nav__itemsContainer">
+            <ol>
+              <li class="nav__item">
+                <a href="#Home">Home</a>
+              </li>
+              <li class="nav__item">
+                <a href="#About">About</a>
+              </li>
+              <li class="nav__item">
+                <a href="#Projects">Projects</a>
+              </li>
+              <li class="nav__item">
+                <a href="#Contact">Contact</a>
+              </li>
+            </ol>
+          </div>
+          <div class="menu__box">
+            <div class="menu__container">
+              <div class="menu"></div>
+            </div>
+          </div>
+        </nav>
+
+        <div class="mobile__menu">
+          <ul class="mobile__navList">
+            <li class="nav__itemMob">
+              <a href="#Home">Home</a>
+            </li>
+            <li class="nav__itemMob">
+              <a href="#About">About</a>
+            </li>
+            <li class="nav__itemMob">
+              <a href="#Projects">Projects</a>
+            </li>
+            <li class="nav__itemMob">
+              <a href="#Contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <div class="page__background"></div>
+
+      <main class="style__mainContainer">
+        <!--======== Hero section ========-->
+        <section id="Home" class="home">
+          <div class="desc">
+            <p class="desc__greet">Hello,</p>
+            <h1 class="desc__name">I'm Ramon.</h1>
+            <h2 class="desc__title">A self-taught web developer.</h2>
+            <p class="desc__text">
+              I focus on building fully functional and responsive websites with
+              a constant desire in improving my skills and technology stack for
+              a better user experience!
+            </p>
+          </div>
+          <div class="home__buttonsArea">
+            <div class="buttons__container">
+              <a href="#Contact" class="contact__btn">
+                <i class="fas fa-mug-hot"></i>
+                Get in touch
+              </a>
+              <a href="#" class="resume__link">
+                <i class="fas fa-external-link-alt"></i>
+                Resume
+              </a>
+            </div>
+          </div>
+          <div class="links__area">
+            <div class="links__container">
+              <a
+                href="https://www.linkedin.com/in/ramon-ramos-423775233/"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+
+              <a href="https://github.com/ramonvramos" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+
+              <a href="https://www.freecodecamp.org/rbvr" target="_blank"
+                ><i class="fab fa-free-code-camp"></i
+              ></a>
+
+              <a href="https://www.facebook.com/rbvr03" target="_blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
+            </div>
+          </div>
+
+          <a id="scroll-down" href="#About">
+            <div class="scroll__down"></div>
+          </a>
+        </section>
+
+        <!--======== About section ========-->
+        <section id="About" class="about">
+          <h1 class="about__heading">About Me</h1>
+          <div class="about__container">
+            <div class="about__description">
+              <h3 class="description__header">How it all started:</h3>
+              <p class="about__description__intro">
+                Hello, I'm Ramon, a web developer with a background as a
+                <a
+                  href="https://en.wikipedia.org/wiki/Medical_laboratory_scientist"
+                  target="_blank"
+                  >medical laboratory scientist</a
+                >.
+              </p>
+              <p class="about__description__story">
+                My interest in coding started out of my curiosity after I read
+                about competetive programming. I started to learn JavaScript for
+                it and later knew that it can be used to build websites. I then
+                learned about DOM manipulation, and it turns out, I found my
+                passion for building websites! With it, I decided to pursue web
+                development.
+              </p>
+            </div>
+            <div class="about__tools">
+              <h3 class="about__tools__Header">What I work with:</h3>
+              <div class="tools__container">
+                <div class="tool__item">
+                  <i class="fab fa-html5"></i>
+                  <p>HTML</p>
+                </div>
+                <div class="tool__item">
+                  <i class="fab fa-css3-alt"></i>
+                  <p>CSS</p>
+                </div>
+                <div class="tool__item">
+                  <i class="fab fa-js-square"></i>
+                  <p>JavaScript</p>
+                </div>
+                <div class="tool__item">
+                  <i class="fab fa-sass"></i>
+                  <p>Sass</p>
+                </div>
+                <div class="tool__item">
+                  <i class="fab fa-git-square"></i>
+                  <p>Git</p>
+                </div>
+                <div class="tool__item">
+                  <i class="fab fa-github"></i>
+                  <p>Github</p>
+                </div>
+                <div class="tool__item">
+                  <i class="fab fa-php"></i>
+                  <p>PHP</p>
+                </div>
+                <div class="tool__item">
+                  <i class="fab fa-figma"></i>
+                  <p>Figma</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--======== Projects section ========-->
+        <section id="Projects" class="projects">
+          <h1 class="projects__heading">Some stuff I built</h1>
+          <div class="project">
+            <div class="project__image">
+              <a
+                href="https://ramonvramos.github.io/sneakers-e-commerce/"
+                target="_blank"
+              >
+                <picture>
+                  <source
+                    media="(min-width: 500px)"
+                    srcset="/images/ecomdesktop.PNG"
+                  />
+                  <img src="/images/ecommobile.PNG" alt="preview img" />
+                </picture>
+              </a>
+            </div>
+            <div class="project__container">
+              <h3 class="project__container__title">E-commerce product page</h3>
+              <p class="project__container__description">
+                A functional e-commerce website challenge by
+                <a
+                  href="https://www.frontendmentor.io/challenges"
+                  target="_blank"
+                  >frontendmentor</a
+                >. Built using only HTML, CSS & JavaScript.
+              </p>
+              <div class="project__container__tools">
+                <div class="tools__inner">
+                  <i class="fab fa-html5"></i>
+                  <p>HTML</p>
+                </div>
+                <div class="tools__inner">
+                  <i class="fab fa-css3-alt"></i>
+                  <p>CSS</p>
+                </div>
+                <div class="tools__inner">
+                  <i class="fab fa-js-square"></i>
+                  <p>JavaScript</p>
+                </div>
+              </div>
+              <div class="buttons__container">
+                <a
+                  href="https://ramonvramos.github.io/sneakers-e-commerce/"
+                  target="_blank"
+                  class="preview__site"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                  Preview site
+                </a>
+                <a
+                  href="https://github.com/ramonvramos/sneakers-e-commerce"
+                  target="_blank"
+                  class="code__repo"
+                >
+                  <i class="fab fa-github"></i>
+                  Code repo
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--======== Contact section ========-->
+        <section id="Contact" class="contact">
+          <div class="contact__container">
+            <h1 class="contact__header">Let's talk</h1>
+            <div class="contact__formBox">
+              <div class="form__container">
+                <h3 class="form__header">Say hello</h3>
+                <p class="contact__description">
+                  Feel free to contact me anytime, I'm always happy to hear from
+                  new opportunities and ideas!
+                </p>
+                <form
+                  action="https://formsubmit.co/ramonramosrmt@gmail.com"
+                  method="POST"
+                  class="contact__form"
+                >
+                  <div class="input__box">
+                    <input
+                      type="text"
+                      name="username"
+                      placeholder="Your name"
+                      required
+                    />
+                  </div>
+                  <div class="input__box">
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Your email"
+                      required
+                    />
+                  </div>
+                  <div class="input__box">
+                    <input
+                      type="text"
+                      name="subject"
+                      placeholder="Subject"
+                      required
+                    />
+                  </div>
+                  <div class="textarea__box">
+                    <textarea
+                      name="message"
+                      rows="10"
+                      placeholder="Your message..."
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="form__submit">
+                    <button class="submit__button" type="submit">
+                      <i class="fas fa-paper-plane"></i>
+                      <p>Submit</p>
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="contact__details">
+                <h3 class="details__header">Let's work together</h3>
+                <div class="itemDetails__container">
+                  <div class="contact__item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <div class="item__descriptionBox">
+                      <h4>text me</h4>
+                      <p class="contact__number">+63 995 016 9509</p>
+                    </div>
+                  </div>
+                  <div class="contact__item">
+                    <i class="fas fa-mail-bulk"></i>
+                    <div class="item__descriptionBox">
+                      <h4>email me</h4>
+                      <a class="mailtoui" href="mailto:ramonramosrmt@gmail.com"
+                        >ramonramosrmt@gmail.com</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footerLinks__area">
+          <div class="footerLinks__container">
+            <a
+              href="https://www.linkedin.com/in/ramon-ramos-423775233/"
+              target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+
+            <a href="https://github.com/ramonvramos" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+
+            <a href="https://www.freecodecamp.org/rbvr" target="_blank"
+              ><i class="fab fa-free-code-camp"></i
+            ></a>
+
+            <a href="https://www.facebook.com/rbvr03" target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+          </div>
+          <p class="copyright">
+            © Copyright 2023 | Designed & built by
+            <a href="#Home">Ramon Ramos</a>. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/mailtoui@1.0.3/dist/mailtoui-min.js"></script>
+  </body>
+</html>
