@@ -457,7 +457,7 @@ header .mobile__menu.active {
   margin: auto;
   left: 0;
   right: 0;
-  bottom: 4rem;
+  bottom: 0;
   cursor: pointer;
 }
 .home .scroll__down::before {
