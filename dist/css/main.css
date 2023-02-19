@@ -141,7 +141,7 @@ header .mobile__menu {
   display: flex;
   justify-content: center;
   width: 60%;
-  min-height: 100vh;
+  min-height: 110vh;
   position: absolute;
   opacity: 0;
   visibility: hidden;
@@ -168,9 +168,13 @@ header .mobile__menu ul li {
   position: relative;
   padding: 0.5rem;
   cursor: pointer;
+}
+header .mobile__menu ul li a {
+  text-decoration: none;
+  color: #303030;
   transition: color 0.25s ease-in-out;
 }
-header .mobile__menu ul li:hover {
+header .mobile__menu ul li a:hover {
   color: #990011;
 }
 header .mobile__menu ul li::before {
@@ -425,6 +429,10 @@ header .mobile__menu.active {
   display: flex;
   justify-content: center;
 }
+.home .links__area .links__container a {
+  text-decoration: none;
+  color: #303030;
+}
 .home .links__area .links__container i {
   margin: 0 1rem;
   font-size: 1.5rem;
@@ -674,6 +682,7 @@ header .mobile__menu.active {
   border: 2px solid #eeeeee;
   border-radius: 10px;
   transition: all 0.25s;
+  cursor: pointer;
 }
 .projects .project__container__tools .tools__inner:hover, .contact .project__container__tools .tools__inner:hover, .projects .project__container__tools .tools__inner:focus, .contact .project__container__tools .tools__inner:focus {
   color: #990011;
@@ -711,7 +720,7 @@ header .mobile__menu.active {
   transition: transform 0.25s ease-in-out;
   transform: scaleX(0);
 }
-.projects .project__container .buttons__container a:hover::before, .contact .project__container .buttons__container a:hover::before, .projects .project__container .buttons__container a:focus::before, .contact .project__container .buttons__container a:focus::before {
+.projects .project__container .buttons__container a:hover::before, .contact .project__container .buttons__container a:hover::before {
   transform: scaleX(1);
 }
 .projects .project__container .buttons__container i, .contact .project__container .buttons__container i {
@@ -840,6 +849,14 @@ header .mobile__menu.active {
   display: inline-block;
   width: 100%;
 }
+.contact__formBox .contact__details .itemDetails__container .contact__item .item__descriptionBox a {
+  text-decoration: none;
+  color: #303030;
+  transition: color 0.25s;
+}
+.contact__formBox .contact__details .itemDetails__container .contact__item .item__descriptionBox a:hover {
+  color: #990011;
+}
 
 footer {
   height: 7rem;
@@ -867,6 +884,10 @@ footer {
   height: 2px;
   background-color: #eeeeee;
 }
+.footerLinks__area .footerLinks__container a {
+  text-decoration: none;
+  color: #303030;
+}
 .footerLinks__area .footerLinks__container i {
   font-size: 1.5rem;
   transition: all 0.2s;
@@ -880,11 +901,13 @@ footer {
   margin: 0 5px;
   font-size: 0.9rem;
 }
-.footerLinks__area .copyright span {
+.footerLinks__area .copyright a {
+  text-decoration: none;
+  color: #303030;
   font-weight: 600;
   transition: all 0.25s;
   cursor: pointer;
 }
-.footerLinks__area .copyright span:hover, .footerLinks__area .copyright span:focus {
+.footerLinks__area .copyright a:hover, .footerLinks__area .copyright a:focus {
   color: #990011;
 }/*# sourceMappingURL=main.css.map */

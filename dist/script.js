@@ -4,6 +4,7 @@ const darkBG = document.querySelector(".page__background");
 const menuContainer = document.querySelector(".menu__container");
 const navbar = document.querySelector(".style__header");
 const body = document.querySelector("body");
+const mobileNavList = document.querySelector(".mobile__navList").children;
 
 // Mobile menu animation toggle
 menuBox.addEventListener("click", (e) => {
@@ -13,12 +14,20 @@ menuBox.addEventListener("click", (e) => {
   body.classList.toggle("toHide");
 });
 
-darkBG.addEventListener("click", (e) => {
+darkBG.addEventListener("click", removeMobileNav);
+
+//Close mobile nav upon click on items
+const navItemsMobile = [...mobileNavList];
+navItemsMobile.forEach((item) => {
+  item.addEventListener("click", removeMobileNav);
+});
+
+function removeMobileNav() {
   menuContainer.classList.remove("active");
   mobileNav.classList.remove("active");
   darkBG.classList.remove("active");
   body.classList.remove("toHide");
-});
+}
 // navbar animation slide up
 let previousScroll = window.pageYOffset;
 window.onscroll = function () {

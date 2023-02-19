@@ -51,11 +51,19 @@
         </nav>
 
         <div class="mobile__menu">
-          <ul>
-            <li class="nav__item">Home</li>
-            <li class="nav__item">About</li>
-            <li class="nav__item">Projects</li>
-            <li class="nav__item">Contact</li>
+          <ul class="mobile__navList">
+            <li class="nav__itemMob">
+              <a href="#Home">Home</a>
+            </li>
+            <li class="nav__itemMob">
+              <a href="#About">About</a>
+            </li>
+            <li class="nav__itemMob">
+              <a href="#Projects">Projects</a>
+            </li>
+            <li class="nav__itemMob">
+              <a href="#Contact">Contact</a>
+            </li>
           </ul>
         </div>
       </header>
@@ -88,10 +96,23 @@
           </div>
           <div class="links__area">
             <div class="links__container">
-              <i class="fab fa-linkedin"></i>
-              <i class="fab fa-github"></i>
-              <i class="fab fa-free-code-camp"></i>
-              <i class="fab fa-facebook"></i>
+              <a
+                href="https://www.linkedin.com/in/ramon-ramos-423775233/"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+
+              <a href="https://github.com/ramonvramos" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+
+              <a href="https://www.freecodecamp.org/rbvr" target="_blank"
+                ><i class="fab fa-free-code-camp"></i
+              ></a>
+
+              <a href="https://www.facebook.com/rbvr03" target="_blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
             </div>
           </div>
 
@@ -168,13 +189,18 @@
           <h1 class="projects__heading">Some stuff I built</h1>
           <div class="project">
             <div class="project__image">
-              <picture>
-                <source
-                  media="(min-width: 500px)"
-                  srcset="/images/ecomdesktop.PNG"
-                />
-                <img src="/images/ecommobile.PNG" alt="preview img" />
-              </picture>
+              <a
+                href="https://ramonvramos.github.io/sneakers-e-commerce/"
+                target="_blank"
+              >
+                <picture>
+                  <source
+                    media="(min-width: 500px)"
+                    srcset="/images/ecomdesktop.PNG"
+                  />
+                  <img src="/images/ecommobile.PNG" alt="preview img" />
+                </picture>
+              </a>
             </div>
             <div class="project__container">
               <h3 class="project__container__title">E-commerce product page</h3>
@@ -201,11 +227,19 @@
                 </div>
               </div>
               <div class="buttons__container">
-                <a href="#" class="preview__site">
+                <a
+                  href="https://ramonvramos.github.io/sneakers-e-commerce/"
+                  target="_blank"
+                  class="preview__site"
+                >
                   <i class="fas fa-external-link-alt"></i>
                   Preview site
                 </a>
-                <a href="#" class="code__repo">
+                <a
+                  href="https://github.com/ramonvramos/sneakers-e-commerce"
+                  target="_blank"
+                  class="code__repo"
+                >
                   <i class="fab fa-github"></i>
                   Code repo
                 </a>
@@ -276,15 +310,17 @@
                   <div class="contact__item">
                     <i class="fas fa-mobile-alt"></i>
                     <div class="item__descriptionBox">
-                      <h4>text me</h3>
+                      <h4>text me</h4>
                       <p class="contact__number">+63 995 016 9509</p>
                     </div>
                   </div>
                   <div class="contact__item">
                     <i class="fas fa-mail-bulk"></i>
                     <div class="item__descriptionBox">
-                      <h4>email me</h3>
-                      <p class="contact__email">ramonramosrmt@gmail.com</p>
+                      <h4>email me</h4>
+                      <a class="mailtoui" href="mailto:ramonramosrmt@gmail.com"
+                        >ramonramosrmt@gmail.com</a
+                      >
                     </div>
                   </div>
                 </div>
@@ -297,17 +333,31 @@
       <footer>
         <div class="footerLinks__area">
           <div class="footerLinks__container">
-            <i class="fab fa-linkedin"></i>
-            <i class="fab fa-github"></i>
-            <i class="fab fa-free-code-camp"></i>
-            <i class="fab fa-facebook"></i>
+            <a
+              href="https://www.linkedin.com/in/ramon-ramos-423775233/"
+              target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+
+            <a href="https://github.com/ramonvramos" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+
+            <a href="https://www.freecodecamp.org/rbvr" target="_blank"
+              ><i class="fab fa-free-code-camp"></i
+            ></a>
+
+            <a href="https://www.facebook.com/rbvr03" target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
           </div>
           <p class="copyright">
             © Copyright 2023 | Designed & built by
-            <span>Ramon Ramos</span>. All rights reserved.
+            <a href="#Home">Ramon Ramos</a>. All rights reserved.
           </p>
         </div>
       </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/mailtoui@1.0.3/dist/mailtoui-min.js"></script>
   </body>
 </html>

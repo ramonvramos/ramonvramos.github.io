@@ -23,7 +23,7 @@ header {
     display: flex;
     justify-content: center;
     width: 60%;
-    min-height: 100vh;
+    min-height: 110vh;
     position: absolute;
     opacity: 0;
     visibility: hidden;
@@ -50,10 +50,15 @@ header {
         position: relative;
         padding: 0.5rem;
         cursor: pointer;
-        transition: color 0.25s ease-in-out;
 
-        &:hover {
-          color: $accent;
+        a {
+          text-decoration: none;
+          color: $shade-5;
+          transition: color 0.25s ease-in-out;
+
+          &:hover {
+            color: $accent;
+          }
         }
 
         &::before {
@@ -337,6 +342,11 @@ header {
       display: flex;
       justify-content: center;
 
+      a {
+        text-decoration: none;
+        color: $shade-5;
+      }
+
       & i {
         margin: 0 1rem;
         font-size: 1.5rem;
@@ -612,6 +622,7 @@ header {
           border: 2px solid $shade-2;
           border-radius: 10px;
           transition: all 0.25s;
+          cursor: pointer;
 
           &:hover,
           &:focus {
@@ -625,7 +636,6 @@ header {
 
           & p {
             display: inline-block;
-
             font-size: 0.8rem;
           }
         }
@@ -657,8 +667,7 @@ header {
             transform: scaleX(0);
           }
 
-          &:hover::before,
-          &:focus::before {
+          &:hover::before {
             transform: scaleX(1);
           }
         }
@@ -810,6 +819,16 @@ header {
           & .item__descriptionBox {
             display: inline-block;
             width: 100%;
+
+            a {
+              text-decoration: none;
+              color: $shade-5;
+              transition: color 0.25s;
+
+              &:hover {
+                color: $accent;
+              }
+            }
           }
         }
       }
@@ -842,6 +861,11 @@ footer {
       background-color: $shade-2;
     }
 
+    a {
+      text-decoration: none;
+      color: $shade-5;
+    }
+
     i {
       font-size: 1.5rem;
       transition: all 0.2s;
@@ -859,7 +883,9 @@ footer {
     margin: 0 5px;
     font-size: 0.9rem;
 
-    span {
+    a {
+      text-decoration: none;
+      color: $shade-5;
       font-weight: 600;
       transition: all 0.25s;
       cursor: pointer;
