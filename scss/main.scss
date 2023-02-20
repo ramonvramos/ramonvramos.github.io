@@ -3,6 +3,11 @@
 @import "./mixins";
 @import "./media";
 
+body,
+html {
+  overflow-x: hidden;
+}
+
 .content__layout {
   max-width: 100%;
   display: flex;
