@@ -154,7 +154,7 @@ header .mobile__menu {
   border-top: 1px solid #eeeeee;
   border-left: 2px solid #eeeeee;
   box-shadow: -3px 0 10px -10px #919191;
-  transition: 0.5s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 header .mobile__menu ul {
   width: 50%;
