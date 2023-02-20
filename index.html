@@ -12,6 +12,9 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     />
+    <!-- AOS stylesheet -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Main stylesheet-->
     <link rel="stylesheet" href="./css/main.css" />
     <script src="script.js" defer></script>
   </head>
@@ -49,7 +52,7 @@
             </div>
           </div>
         </nav>
-
+        <!--===== Mobile nav menu =====-->
         <div class="mobile__menu">
           <ul class="mobile__navList">
             <li class="nav__itemMob">
@@ -73,10 +76,14 @@
         <!--======== Hero section ========-->
         <section id="Home" class="home">
           <div class="desc">
-            <p class="desc__greet">Hello,</p>
-            <h1 class="desc__name">I'm Ramon.</h1>
-            <h2 class="desc__title">A self-taught web developer.</h2>
-            <p class="desc__text">
+            <p class="desc__greet" data-aos="fade-right">Hello,</p>
+            <h1 class="desc__name" data-aos="fade-left" data-aos-delay="1000">
+              I'm Ramon.
+            </h1>
+            <h2 class="desc__title" data-aos="fade-right" data-aos-delay="2000">
+              A self-taught web developer.
+            </h2>
+            <p class="desc__text" data-aos="fade-up">
               I focus on building fully functional and responsive websites with
               a constant desire in improving my skills and technology stack for
               a better user experience!
@@ -84,7 +91,7 @@
           </div>
           <div class="home__buttonsArea">
             <div class="buttons__container">
-              <a href="#Contact" class="contact__btn">
+              <a href="#Contact" class="contact__btn" data-aos="fade-right">
                 <i class="fas fa-mug-hot"></i>
                 Get in touch
               </a>
@@ -92,6 +99,7 @@
                 href="/docs/Web Dev Resume.pdf"
                 target="_blank"
                 class="resume__link"
+                data-aos="fade-left"
               >
                 <i class="fas fa-external-link-alt"></i>
                 Resume
@@ -103,18 +111,32 @@
               <a
                 href="https://www.linkedin.com/in/ramon-ramos-423775233/"
                 target="_blank"
+                data-aos="zoom-in"
+                data-aos-delay="1000"
                 ><i class="fab fa-linkedin"></i
               ></a>
 
-              <a href="https://github.com/ramonvramos" target="_blank"
+              <a
+                href="https://github.com/ramonvramos"
+                target="_blank"
+                data-aos="zoom-in"
+                data-aos-delay="1100"
                 ><i class="fab fa-github"></i
               ></a>
 
-              <a href="https://www.freecodecamp.org/rbvr" target="_blank"
+              <a
+                href="https://www.freecodecamp.org/rbvr"
+                target="_blank"
+                data-aos="zoom-in"
+                data-aos-delay="1200"
                 ><i class="fab fa-free-code-camp"></i
               ></a>
 
-              <a href="https://www.facebook.com/rbvr03" target="_blank"
+              <a
+                href="https://www.facebook.com/rbvr03"
+                target="_blank"
+                data-aos="zoom-in"
+                data-aos-delay="1300"
                 ><i class="fab fa-facebook"></i
               ></a>
             </div>
@@ -127,9 +149,9 @@
 
         <!--======== About section ========-->
         <section id="About" class="about">
-          <h1 class="about__heading">About Me</h1>
+          <h1 class="about__heading" data-aos="zoom-in">About Me</h1>
           <div class="about__container">
-            <div class="about__description">
+            <div class="about__description" data-aos="fade-up">
               <h3 class="description__header">How it all started:</h3>
               <p class="about__description__intro">
                 Hello, I'm Ramon, a web developer with a background as a
@@ -148,7 +170,7 @@
                 development.
               </p>
             </div>
-            <div class="about__tools">
+            <div class="about__tools" data-aos="fade-up">
               <h3 class="about__tools__Header">What I work with:</h3>
               <div class="tools__container">
                 <div class="tool__item">
@@ -190,12 +212,14 @@
 
         <!--======== Projects section ========-->
         <section id="Projects" class="projects">
-          <h1 class="projects__heading">Some stuff I built</h1>
+          <h1 class="projects__heading" data-aos="zoom-in">
+            Some stuff I built
+          </h1>
 
           <div class="allProject-container">
             <!--===== E-commerce Project =====-->
             <div class="project">
-              <div class="project__image">
+              <div class="project__image" data-aos="fade-right">
                 <a
                   href="https://ramonvramos.github.io/sneakers-e-commerce/"
                   target="_blank"
@@ -209,7 +233,7 @@
                   </picture>
                 </a>
               </div>
-              <div class="project__container">
+              <div class="project__container" data-aos="fade-left">
                 <h3 class="project__container__title">
                   E-commerce product page
                 </h3>
@@ -258,7 +282,10 @@
 
             <!--===== Portfolio Project =====-->
             <div class="project secondProject">
-              <div class="project__container secondPContainer">
+              <div
+                class="project__container secondPContainer"
+                data-aos="fade-right"
+              >
                 <h3 class="project__container__title">
                   Personal Portfolio Website
                 </h3>
@@ -302,7 +329,7 @@
                 </div>
               </div>
 
-              <div class="project__image">
+              <div class="project__image" data-aos="fade-left">
                 <a href="#Home">
                   <picture>
                     <source
@@ -320,9 +347,9 @@
         <!--======== Contact section ========-->
         <section id="Contact" class="contact">
           <div class="contact__container">
-            <h1 class="contact__header">Let's talk</h1>
+            <h1 class="contact__header" data-aos="zoom-out">Let's talk</h1>
             <div class="contact__formBox">
-              <div class="form__container">
+              <div class="form__container" data-aos="fade-right">
                 <h3 class="form__header">Say hello</h3>
                 <p class="contact__description">
                   Feel free to contact me anytime, I'm always happy to hear from
@@ -373,7 +400,7 @@
                   </div>
                 </form>
               </div>
-              <div class="contact__details">
+              <div class="contact__details" data-aos="fade-left">
                 <h3 class="details__header">Let's work together</h3>
                 <div class="itemDetails__container">
                   <div class="contact__item">
@@ -427,6 +454,12 @@
         </div>
       </footer>
     </div>
+    <!--===== MailtoUI script =====-->
     <script src="https://cdn.jsdelivr.net/npm/mailtoui@1.0.3/dist/mailtoui-min.js"></script>
+    <!--===== AOS library script =====-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true });
+    </script>
   </body>
 </html>
