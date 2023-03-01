@@ -16,6 +16,12 @@
   .menu__box {
     display: none !important;
   }
+  .mobile__menu.active {
+    display: none;
+  }
+  .page__background {
+    display: none;
+  }
   .home .desc p {
     font-size: 1.3rem;
   }

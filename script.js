@@ -3,6 +3,7 @@ const mobileNav = document.querySelector(".mobile__menu");
 const darkBG = document.querySelector(".page__background");
 const menuContainer = document.querySelector(".menu__container");
 const navbar = document.querySelector(".style__header");
+const html = document.querySelector("html");
 const body = document.querySelector("body");
 const mobileNavList = document.querySelector(".mobile__navList").children;
 
@@ -11,6 +12,7 @@ menuBox.addEventListener("click", (e) => {
   menuContainer.classList.toggle("active");
   mobileNav.classList.toggle("active");
   darkBG.classList.toggle("active");
+  html.classList.toggle("toHide");
   body.classList.toggle("toHide");
 });
 
@@ -26,6 +28,7 @@ function removeMobileNav() {
   menuContainer.classList.remove("active");
   mobileNav.classList.remove("active");
   darkBG.classList.remove("active");
+  html.classList.remove("toHide");
   body.classList.remove("toHide");
 }
 // navbar animation slide up
